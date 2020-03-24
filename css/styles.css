@@ -119,7 +119,7 @@ main section:first-child {
   @media (min-width: 768px) {
     main section:first-child img {
       width: 82%;
-      height: auto;
+      height: 250px;
       object-fit: cover;
       margin-left: auto; } }
   main section:first-child p {
