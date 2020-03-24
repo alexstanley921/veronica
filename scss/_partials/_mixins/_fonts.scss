@@ -6,10 +6,12 @@
   font-family: $display-font;
   color: $color-1;
   text-transform: uppercase;
+
   // ABOVE - media independent code
   // BELOW - media dependent code
+  font-size: 1.5em;
   @media (min-width: $desktop) {
-
+    font-size: 1.75em;
   }
 }
 
@@ -36,4 +38,14 @@
   @media (min-width: $desktop) {
 
   }
+}
+
+@mixin sub-text-font {
+  font-family: $text-font;
+  font-style: italic;
+  font-size: .9em;
+}
+
+@mixin align-right {
+  text-align: right;
 }

@@ -7,7 +7,7 @@ header h1 { // Selects the h1 in the header, Which is "Veronica Jane"
 
 nav a { // Selects the a-text links in the nav
   @include text-font;
-  @include underline-animation;
+  @include underline-animation-accent;
 }
 
 h1 {
@@ -27,20 +27,8 @@ p {
 ************************************/
 
 body {
+  @include body-section;
   @include body-margin;
-  display: grid;
-  margin: 0 auto;
-  max-width: $max-width;
-
-  // ABOVE - media independent code
-  // BELOW - media dependent code
-  @media (min-width: $desktop) {
-    grid-template-columns: 1fr 3fr;
-    grid-column-gap: 5em;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "header main";
-  }
 }
 
 /***********************************
@@ -48,15 +36,26 @@ body {
 ************************************/
 
 header {
+  @include header-section;
+  @include header-margin;
   grid-area: header;
 }
 
 header h1 {
-  @include title-margin;
+  @include nav-title-margin;
 }
 
 header a {
   @include nav-item-margin;
+}
+
+.hamburger {
+  @include hamburger-item;
+}
+
+nav .hamburger {
+  @include hamburger-item;
+  @include section-margin;
 }
 
 /***********************************
@@ -64,7 +63,8 @@ header a {
 ************************************/
 
 nav {
-
+  @include nav-section;
+  @include nav-margin;
 }
 
 /***********************************
@@ -80,36 +80,52 @@ main {
 **************  Sections  **********
 ************************************/
 main section:first-child { // selects the first section
-  @include header-section;
+  @include intro-section;
 
   p {
     @include item-margin;
   }
 }
 
-main section:nth-of-type(2) { // select the section section
+main section:nth-of-type(2) { // select the second section
   @include thumbnail-section;
+  h1 {
+    @include header-item;
+  }
 }
 
 
 main section:nth-of-type(3) { // selects the third section
   @include thumbnail-section;
   h1 {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
+    @include title-margin;
+    @include header-item;
   }
 }
 
 .thumbnail {
   @include thumbnail-item;
+
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+    @include thumbnail-margin;
+  }
+
+}
+
+.thumbnail:nth-of-type(n + 2) { // skips first thumbnail
   @include thumbnail-margin;
 }
 
 .divider {
-  @include divider-span;
+  @include divider-span-accent;
 }
 
-/***********************************
-**************  Thumbnail  *********
-************************************/
+footer {
+  @include footer-item;
+  @include sub-text-font;
+  @include thumbnail-margin;
+  @include section-margin;
+  grid-area: footer;
+}

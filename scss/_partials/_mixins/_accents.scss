@@ -1,6 +1,6 @@
 /////////////////// Small Pieces
 
-@mixin divider-span {
+@mixin divider-span-accent {
   display: block;
   position: relative;
   margin: 0 auto;
@@ -21,7 +21,7 @@
   }
 }
 
-@mixin underline-animation {
+@mixin underline-animation-accent {
   position: relative;
   width: auto;
   &:before {

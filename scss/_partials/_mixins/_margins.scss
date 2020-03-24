@@ -3,10 +3,31 @@
 ************************************/
 
 @mixin body-margin {
+  margin: 0 auto;
+  max-width: 100vw;
+  overflow-x: hidden;
   // ABOVE - media independent code
   // BELOW - media dependent code
   @media (min-width: $desktop) {
-    padding: 7em 2.5em;
+    padding: 7em 2.5em 0;
+  }
+}
+
+@mixin header-margin {
+  padding: 1.5em 2em;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
+}
+
+@mixin nav-margin {
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  padding: 2em 3em;
+  @media (min-width: $desktop) {
+    padding: 0;
   }
 }
 
@@ -14,8 +35,9 @@
 
   // ABOVE - media independent code
   // BELOW - media dependent code
+  margin-top: 3em;
   @media (min-width: $desktop) {
-    margin-top: 3em;
+
   }
 }
 
@@ -27,11 +49,20 @@
   }
 }
 
+@mixin nav-title-margin {
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+    margin-bottom: 1em;
+  }
+}
+
 @mixin title-margin {
   margin-bottom: 1em;
   // ABOVE - media independent code
   // BELOW - media dependent code
   @media (min-width: $desktop) {
+
   }
 }
 

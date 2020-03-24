@@ -1,0 +1,105 @@
+/***********************************
+**************  Smaller Things  ****
+************************************/
+@mixin header-item {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+@mixin footer-item {
+  display: inline-block;
+  margin: auto;
+}
+
+
+/***********************************
+**************  thumbnail  ************
+************************************/
+
+@mixin thumbnail-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  box-shadow: 0 5px 5px $color-1;
+  width: $tm-width;
+  height: $tm-height;
+  padding: 2.5% 5%;
+  &:hover img {
+    transform: scale(1.1);
+    opacity: .8;
+  }
+
+  @media (min-width: $desktop) {
+    width: $td-width;
+    height: $td-height;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .img-container {
+    overflow: hidden;
+    // ABOVE - media independent code
+    // BELOW - media dependent code
+    width: $tm-width;
+    height: $tm-height * (2/3);
+    @media (min-width: $desktop) {
+      width: $td-width;
+      height: $td-height * (2/3);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all $transition-time;
+    // ABOVE - media independent code
+    // BELOW - media dependent code
+
+    @media (min-width: $desktop) {
+    }
+  }
+}
+
+/***********************************
+**************  Hamburger  ************
+************************************/
+
+@mixin hamburger-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 25px;
+  min-width: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover span {
+    background: rgba(0,0,0,.5);
+    cursor: pointer;
+  }
+
+  &:active span {
+    background: rgba(0,0,0,.8);
+    cursor: pointer;
+  }
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+    display: none;
+  }
+
+  span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: black;
+    transition: background $transition-time;
+  }
+}
