@@ -74,6 +74,12 @@ nav {
 main {
   grid-area: main;
   width: 100%;
+
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+    animation: .75s ease-out upSlide;
+  }
 }
 
 /***********************************

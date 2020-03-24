@@ -7,6 +7,7 @@
   // ABOVE - media independent code
   // BELOW - media dependent code
   @media (min-width: $desktop) {
+    // animation: .75s ease-out upSlide;
     display: grid;
     max-width: $max-width;
     grid-template-columns: 1fr 3fr;

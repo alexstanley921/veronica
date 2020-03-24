@@ -21,3 +21,21 @@ $td-width: 175px; // --Thumbnail-Desktop-Width
 
 // Other
 $transition-time: .25s ease-out;
+
+// Keyframes
+
+@keyframes upSlide {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  75% {
+    opacity: .15;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
