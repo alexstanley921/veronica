@@ -91,6 +91,7 @@ main section:nth-of-type(2) { // select the second section
   @include thumbnail-section;
   h1 {
     @include header-item;
+    @include title-margin;
   }
 }
 
