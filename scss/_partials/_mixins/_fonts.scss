@@ -1,0 +1,39 @@
+/***********************************
+**************  Fonts  *************
+************************************/
+
+@mixin title-font {
+  font-family: $display-font;
+  color: $color-1;
+  text-transform: uppercase;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+
+  }
+}
+
+@mixin header-font {
+  font-family: $display-font;
+  color: $color-1;
+  text-transform: capitalize;
+  font-size: 1em;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+
+  }
+}
+
+@mixin text-font {
+  font-family: $text-font;
+  color: $color-1;
+  font-size: .9em;
+  line-height: 1.5;
+  letter-spacing: .5px;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+
+  }
+}

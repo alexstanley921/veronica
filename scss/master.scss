@@ -1,3 +1,29 @@
-@import '_partials/reset.scss',
-        '_partials/mixins.scss',
-        '_partials/selectors.scss';
+@import '_partials/_base/reset.scss',
+        '_partials/_base/variables.scss',
+
+        // Start import of all Mixins
+        '_partials/_mixins/fonts.scss',
+        '_partials/_mixins/accents.scss',
+        '_partials/_mixins/margins.scss',
+        '_partials/_mixins/sections.scss',
+        '_partials/_mixins/elements.scss',
+
+        // start import of all index partials
+        '_partials/_index/default.scss';
+
+        /***********************************
+        **************  Mixins  *********
+        ************************************/
+
+// I've created the mixins as follows:
+// 1. fonts, includes all the mixins for text related stylings
+// 2. margins, includes all the styles for spacing: margin/Paddings
+// 3. accents, includes all the adornment styles, like hover-states, lines, et cetera
+// 4. sections, includes styles for large sections of webpages
+// 5. items, includes styles for individiual components on a web webpages
+
+    /***********************************
+    **************  index  *********
+    ************************************/
+
+// the index partials folder includes the default styles which really just goes as a selectors page that "calls" or @includes the mixins defined in the mixins partials folder

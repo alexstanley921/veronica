@@ -1,0 +1,52 @@
+/***********************************
+*******  Margins & Paddings  *******
+************************************/
+
+@mixin body-margin {
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+    padding: 7em 2.5em;
+  }
+}
+
+@mixin thumbnail-margin {
+
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+    margin-top: 3em;
+  }
+}
+
+@mixin section-margin {
+  margin-bottom: 2.5em;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+  }
+}
+
+@mixin title-margin {
+  margin-bottom: 1em;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+  }
+}
+
+@mixin item-margin {
+  margin-bottom: .25em;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+  }
+}
+
+@mixin nav-item-margin {
+  margin-bottom: .5em;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+  }
+}

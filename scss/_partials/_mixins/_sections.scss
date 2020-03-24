@@ -1,0 +1,63 @@
+/***********************************
+**************  The Body  ************
+************************************/
+@mixin body-section {
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+
+  }
+}
+
+
+
+/***********************************
+**************  The Header  ************
+************************************/
+
+@mixin header-section {
+  display: flex;
+  flex-wrap: nowrap;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+
+  }
+
+  p {
+    text-align: right;
+    // ABOVE - media independent code
+    // BELOW - media dependent code
+    @media (min-width: $desktop) {
+
+    }
+  }
+
+  img {
+
+    // ABOVE - media independent code
+    // BELOW - media dependent code
+    @media (min-width: $desktop) {
+      width: 82%;
+      height: 250px;
+      object-fit: cover;
+      margin-left: auto;
+    }
+  }
+}
+
+/***********************************
+**************  A Section **********
+******   which holds thumbnails  ***
+************************************/
+
+@mixin thumbnail-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+
+  }
+}
