@@ -1,0 +1,115 @@
+/***********************************
+**************  Text  **************
+************************************/
+header h1 { // Selects the h1 in the header, Which is "Veronica Jane"
+  @include title-font;
+}
+
+nav a { // Selects the a-text links in the nav
+  @include text-font;
+  @include underline-animation;
+}
+
+h1 {
+  @include title-font;
+}
+
+h2 {
+  @include header-font;
+}
+
+p {
+  @include text-font;
+}
+
+/***********************************
+**************  Body  **************
+************************************/
+
+body {
+  @include body-margin;
+  display: grid;
+  margin: 0 auto;
+  max-width: $max-width;
+
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 5em;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header main";
+  }
+}
+
+/***********************************
+**************  Header  ************
+************************************/
+
+header {
+  grid-area: header;
+}
+
+header h1 {
+  @include title-margin;
+}
+
+header a {
+  @include nav-item-margin;
+}
+
+/***********************************
+**************  Nav  ***************
+************************************/
+
+nav {
+
+}
+
+/***********************************
+**************  Main  **************
+************************************/
+
+main {
+  grid-area: main;
+  width: 100%;
+}
+
+/***********************************
+**************  Sections  **********
+************************************/
+main section:first-child { // selects the first section
+  @include header-section;
+
+  p {
+    @include item-margin;
+  }
+}
+
+main section:nth-of-type(2) { // select the section section
+  @include thumbnail-section;
+}
+
+
+main section:nth-of-type(3) { // selects the third section
+  @include thumbnail-section;
+  h1 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.thumbnail {
+  @include thumbnail-item;
+  @include thumbnail-margin;
+}
+
+.divider {
+  @include divider-span;
+}
+
+/***********************************
+**************  Thumbnail  *********
+************************************/
